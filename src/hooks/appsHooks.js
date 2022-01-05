@@ -40,6 +40,14 @@ function AppsHooks() {
         })
         getApps()
     }
+    return {
+        apps,
+        setApps,
+        getApps,
+        createApps,
+        updateApps,
+        deleteApps
+    }
 }
 
 export default AppsHooks
