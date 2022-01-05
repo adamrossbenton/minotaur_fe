@@ -1,4 +1,30 @@
-.mainContainer {
+.main-container {
     display: flex;
     flex-direction: row;
+}
+
+.item-section {
+    text-align: left
+}
+
+.menu-section {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.name-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-dietary, .dietary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.diet-icon {
+    height: 20px;
 }

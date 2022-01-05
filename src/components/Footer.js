@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = props => {
     return <>
-        <h1>hello footer</h1>
+        <small>Website Designed by Adam Ross Benton © 2022</small>
     </>
 }
 

@@ -2,7 +2,7 @@ import {useState} from "react"
 
 function EntreesHooks() {
     // DB URL & State
-    const entreesUrl = "https://minotaurbackend.herokuapp.com/appetizers/"
+    const entreesUrl = "https://minotaurbackend.herokuapp.com/entrees/"
     const [entrees, setEntrees] = useState(null)
 
     // Hooks
@@ -34,20 +34,20 @@ function EntreesHooks() {
         getEntrees()
     }
 
-    const deleteApps = async id => {
-        await fetch(appsUrl + id, {
+    const deleteEntrees = async id => {
+        await fetch(entreesUrl + id, {
             method: "delete",
         })
-        getApps()
+        getEntrees()
     }
     return {
-        apps,
-        setApps,
-        getApps,
-        createApps,
-        updateApps,
-        deleteApps
+        entrees,
+        setEntrees,
+        getEntrees,
+        createEntrees,
+        updateEntrees,
+        deleteEntrees
     }
 }
 
-export default AppsHooks
+export default EntreesHooks
