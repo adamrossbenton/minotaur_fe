@@ -7,13 +7,30 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 // Components/Pages
-import DrinksIn from "./pages/index/Drinks"
-import FoodIn from "./pages/index/Food"
 import Main from "./pages/Main"
-import Login from "./pages/admin/Login"
-import Signup from "./pages/admin/Signup"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+// Index
+import DrinksIn from "./pages/index/Drinks"
+import FoodIn from "./pages/index/Food"
+// Show
+import EntreesSh from "./pages/show/Entrees"
+import AppsSh from "./pages/show/Apps"
+import DrinksSh from "./pages/show/Drinks"
+import BeerWinesSh from "./pages/show/BeerWines"
+// Edit
+import EntreesEd from "./pages/edit/Entrees"
+import AppsEd from "./pages/edit/Apps"
+import DrinksEd from "./pages/edit/Drinks"
+import BeerWinesEd from "./pages/edit/BeerWines"
+// New
+import EntreesNew from "./pages/new/Entrees"
+import AppsNew from "./pages/new/Apps"
+import DrinksNew from "./pages/new/Drinks"
+import BeerWinesNew from "./pages/new/BeerWines"
+// Admin
+import Login from "./pages/admin/Login"
+import Signup from "./pages/admin/Signup"
 
 // Hooks
 import AppsHooks from "./hooks/appsHooks.js"
@@ -46,19 +63,47 @@ function App(props) {
 
         {/* FOOD ROUTES */}
         <Route 
+          path="/food/appetizers/new"
+          render={(routerProps) => (
+            <AppsNew {...routerProps}
+              token={token}
+              createApps={createApps}
+            />
+          )}
+        />
+        <Route 
+          path="/food/appetizers/:id/edit"
+          render={(routerProps) => (
+            <AppsEd {...routerProps}
+              token={token}
+              apps={apps}
+              updateApps={updateApps}
+            />
+          )}
+        />
+        <Route 
+          path="/food/appetizers/:id"
+          render={(routerProps) => (
+            <AppsSh {...routerProps}
+              token={token}
+              updateApps={updateApps}
+              deleteApps={deleteApps}
+            />
+          )}
+        />
+        <Route 
           path="/food"
           render={(routerProps) => (
             <FoodIn {...routerProps}
               token={token}
               entrees = {entrees}
               getEntrees={getEntrees}
+              createEntrees={createEntrees}
               apps={apps}
               getApps = {getApps}
+              createApps={createApps}
             />
           )}
-        />
-        <Route 
-          path="/food/:id/edit"
         />
 
         {/* DRINK ROUTES */}
@@ -69,8 +114,10 @@ function App(props) {
               token={token}
               drinks = {drinks}
               getDrinks = {getDrinks}
+              createDrinks={createDrinks}
               beerWines = {beerWines}
               getBeerWines = {getBeerWines}
+              createBeerWines={createBeerWines}
             />
           )}
         />
