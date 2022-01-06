@@ -4,6 +4,7 @@ import {Route, Switch} from "react-router-dom"
 
 // Styles
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
 
 // Components/Pages
 import Drinks from "./pages/Drinks"

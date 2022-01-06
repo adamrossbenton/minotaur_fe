@@ -1,8 +1,18 @@
 /* HOME PAGE */
 .main-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+}
+
+.carousel {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.d-block {
+    height: 300px;
+    width: 80%;
 }
 
 /* HEADER/NAV */
@@ -15,6 +25,7 @@
 
 .header-subsection {
     display: flex;
+    font-size: smaller;
     justify-content: space-between;
     max-width: 80%;
     margin: 0 auto;
@@ -49,6 +60,11 @@
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 481px) {
+    /* HOME PAGE */
+    .d-block {
+        height: 500px;
+    }
+
     /* HEADER/NAV */
     #address {
         max-width: 50%;
@@ -56,6 +72,11 @@
 }
 
 @media screen and (min-width: 1000px) {
+    /* HOME PAGE */
+    .d-block {
+        height: 650px;
+    }
+    
     /* HEADER/NAV */
     #address {
         max-width: 30%
