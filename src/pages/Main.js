@@ -18,7 +18,6 @@ const Main = props => {
     return <>
         <main>
             <div className="main-container">
-                <Nav/>
                 <h1>This is the main page</h1>
             </div>
         </main>

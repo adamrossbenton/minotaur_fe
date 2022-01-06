@@ -3,6 +3,13 @@
     flex-direction: row;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-around;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
 .item-section {
     text-align: left
 }

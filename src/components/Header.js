@@ -1,8 +1,11 @@
 import React from "react"
 
+import Nav from "./Nav.js"
+
 const Header = props => {
     return <>
-        <h1>hello header</h1>
+        <h1>MINOTAUR BAR</h1>
+        <Nav/>
     </>
 }
 
