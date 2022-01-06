@@ -166,6 +166,35 @@ function App(props) {
           )}
         />
         <Route 
+          path="/drinks/beerwines/new"
+          render={(routerProps) => (
+            <BeerWinesNew {...routerProps}
+              token={token}
+              createBeerWines={createBeerWines}
+            />
+          )}
+        />
+        <Route 
+          path="/drinks/beerwines/:id/edit"
+          render={(routerProps) => (
+            <BeerWinesEd {...routerProps}
+              token={token}
+              beerWines={beerWines}
+              updateBeerWines={updateBeerWines}
+            />
+          )}
+        />
+        <Route 
+          path="/drinks/beerwines/:id"
+          render={(routerProps) => (
+            <BeerWinesSh {...routerProps}
+              token={token}
+              updateBeerWines={updateBeerWines}
+              deleteBeerWines={deleteBeerWines}
+            />
+          )}
+        />
+        <Route 
           path="/drinks"
           render={(routerProps) => (
             <DrinksIn {...routerProps}
