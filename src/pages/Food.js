@@ -1,8 +1,5 @@
 import React, {useEffect} from "react"
 
-// Import dietary icons
-// import Vegetarian from ".../public/vegetarianicon.png"
-
 const Food = props => {
 
     // useEffect for initial entree/app render

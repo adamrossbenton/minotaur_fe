@@ -16,12 +16,16 @@ import Footer from "./components/Footer"
 // Hooks
 import AppsHooks from "./hooks/appsHooks.js"
 import EntreesHooks from "./hooks/entreesHooks.js"
+import DrinksHooks from "./hooks/drinksHooks.js"
+import BeerWinesHooks from "./hooks/beerWinesHooks.js"
 
 function App(props) {
   
-  // State hooks for each type of food/drink
+  // Hooks for each type of food/drink
   const {apps, setApps, getApps, createApps, updateApps, deleteApps} = AppsHooks()
   const {entrees, setEntrees, getEntrees, createEntrees, updateEntrees, deleteEntrees} = EntreesHooks()
+  const {drinks, setDrinks, getDrinks, createDrinks, updateDrinks, deleteDrinks} = DrinksHooks()
+  const {beerWines, setBeerWines, getBeerWines, createBeerWines, updateBeerWines, deleteBeerWines} = BeerWinesHooks()
   
   return (
     <div className="App">
@@ -39,7 +43,7 @@ function App(props) {
               setEntrees = {setEntrees}
               getEntrees={getEntrees}
               createEntrees={createEntrees}
-              updateentrees={updateEntrees}
+              updateEntrees={updateEntrees}
               deleteEntrees={deleteEntrees}
               apps={apps}
               setApps={setApps}
@@ -53,7 +57,20 @@ function App(props) {
         <Route 
           path="/drinks"
           render={(routerProps) => (
-            <Drinks {...routerProps}/>
+            <Drinks {...routerProps}
+              drinks = {drinks}
+              setDrinks = {setDrinks}
+              getDrinks = {getDrinks}
+              createDrinks = {createDrinks}
+              updateDrinks = {updateDrinks}
+              deleteDrinks = {deleteDrinks}
+              beerWines = {beerWines}
+              setBeerWines = {setBeerWines}
+              getBeerWines = {getBeerWines}
+              createBeerWines = {createBeerWines}
+              updateBeerWines = {updateBeerWines}
+              deleteBeerWines = {deleteBeerWines}
+            />
           )}
         />
         <Route 
