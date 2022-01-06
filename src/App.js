@@ -137,6 +137,35 @@ function App(props) {
 
         {/* DRINK ROUTES */}
         <Route 
+          path="/drinks/cocktails/new"
+          render={(routerProps) => (
+            <DrinksNew {...routerProps}
+              token={token}
+              createDrinks={createDrinks}
+            />
+          )}
+        />
+        <Route 
+          path="/drinks/cocktails/:id/edit"
+          render={(routerProps) => (
+            <DrinksEd {...routerProps}
+              token={token}
+              drinks={drinks}
+              updateDrinks={updateDrinks}
+            />
+          )}
+        />
+        <Route 
+          path="/drinks/cocktails/:id"
+          render={(routerProps) => (
+            <DrinksSh {...routerProps}
+              token={token}
+              updateDrinks={updateDrinks}
+              deleteDrinks={deleteDrinks}
+            />
+          )}
+        />
+        <Route 
           path="/drinks"
           render={(routerProps) => (
             <DrinksIn {...routerProps}
