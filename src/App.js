@@ -91,6 +91,35 @@ function App(props) {
             />
           )}
         />
+                <Route 
+          path="/food/entrees/new"
+          render={(routerProps) => (
+            <EntreesNew {...routerProps}
+              token={token}
+              createEntrees={createEntrees}
+            />
+          )}
+        />
+        <Route 
+          path="/food/entrees/:id/edit"
+          render={(routerProps) => (
+            <EntreesEd {...routerProps}
+              token={token}
+              entrees={entrees}
+              updateEntrees={updateEntrees}
+            />
+          )}
+        />
+        <Route 
+          path="/food/entrees/:id"
+          render={(routerProps) => (
+            <EntreesSh {...routerProps}
+              token={token}
+              updateEntrees={updateEntrees}
+              deleteEntrees={deleteEntrees}
+            />
+          )}
+        />
         <Route 
           path="/food"
           render={(routerProps) => (
