@@ -58,11 +58,11 @@ const Food = props => {
 
     // Render page
     return <>
-        <div className="menu-section" key="ent-section">
+        <div className="menu-section" id="ent-section">
             <h1>Entrees:</h1>
             {props.entrees? loadedEntrees() : loading()}
         </div>
-        <div className="menu-section" key="app-section">
+        <div className="menu-section" id="app-section">
             <h1>Appetizers:</h1>
             {props.apps? loadedApps() : loading()}
         </div>

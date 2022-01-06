@@ -1,8 +1,11 @@
+/* HOME PAGE */
 .main-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
+/* HEADER/NAV */
 .nav {
     display: flex;
     justify-content: space-around;
@@ -10,6 +13,14 @@
     margin: 0 auto;
 }
 
+.header-subsection {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* CONTENT PAGES */
 .item-section {
     text-align: left
 }
@@ -34,4 +45,24 @@
 
 .diet-icon {
     height: 20px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 481px) {
+    /* HEADER/NAV */
+    #address {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    /* HEADER/NAV */
+    #address {
+        max-width: 30%
+    }
+
+    /* CONTENT PAGES */
+    .menu-section {
+        max-width: 60%
+    }
 }

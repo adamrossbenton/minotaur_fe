@@ -71,25 +71,25 @@ const Drinks = props => {
 
     // Render page
     return <>
-        <div className="menu-section" key="ent-section">
+        <div className="menu-section" id="drink-section">
             <h1>Cocktails:</h1>
             {props.drinks? loadedDrinks() : loading()}
         </div>
         <h1>Beer:</h1>
-        <div className="menu-section" key="app-section">
+        <div className="menu-section" id="draft-section">
             <h2>Draft:</h2>
             {props.beerWines? loadedDraft() : loading()}
         </div>
-        <div className="menu-section" key="app-section">
+        <div className="menu-section" id="bc-section">
             <h2>Bottled/Canned:</h2>
             {props.beerWines? loadedBottleCans() : loading()}
         </div>
         <h1>Wine:</h1>
-        <div className="menu-section" key="app-section">
+        <div className="menu-section" id="red-section">
             <h2>Red:</h2>
             {props.beerWines? loadedRed() : loading()}
         </div>
-        <div className="menu-section" key="app-section">
+        <div className="menu-section" id="white-section">
             <h2>White:</h2>
             {props.beerWines? loadedWhite() : loading()}
         </div>

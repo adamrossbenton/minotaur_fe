@@ -18,7 +18,8 @@ const Main = props => {
     return <>
         <main>
             <div className="main-container">
-                <h1>This is the main page</h1>
+                <h1>Carousel will go here</h1>
+                
             </div>
         </main>
     </>
