@@ -77,6 +77,7 @@ function App(props) {
             <AppsEd {...routerProps}
               token={token}
               apps={apps}
+              getApps={getApps}
               updateApps={updateApps}
             />
           )}
@@ -91,7 +92,7 @@ function App(props) {
             />
           )}
         />
-                <Route 
+        <Route 
           path="/food/entrees/new"
           render={(routerProps) => (
             <EntreesNew {...routerProps}
