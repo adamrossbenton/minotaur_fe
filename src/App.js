@@ -7,10 +7,11 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 // Components/Pages
-import Drinks from "./pages/Drinks"
-import Food from "./pages/Food"
+import DrinksIn from "./pages/index/Drinks"
+import FoodIn from "./pages/index/Food"
 import Main from "./pages/Main"
-import Admin from "./pages/Admin"
+import Login from "./pages/admin/Login"
+import Signup from "./pages/admin/Signup"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
@@ -19,6 +20,7 @@ import AppsHooks from "./hooks/appsHooks.js"
 import EntreesHooks from "./hooks/entreesHooks.js"
 import DrinksHooks from "./hooks/drinksHooks.js"
 import BeerWinesHooks from "./hooks/beerWinesHooks.js"
+import AdminHooks from "./hooks/adminHooks.js"
 
 function App(props) {
   
@@ -27,57 +29,63 @@ function App(props) {
   const {entrees, setEntrees, getEntrees, createEntrees, updateEntrees, deleteEntrees} = EntreesHooks()
   const {drinks, setDrinks, getDrinks, createDrinks, updateDrinks, deleteDrinks} = DrinksHooks()
   const {beerWines, setBeerWines, getBeerWines, createBeerWines, updateBeerWines, deleteBeerWines} = BeerWinesHooks()
+  const {token, setToken, loginUser, createUser, newForm, setNewForm, attempts, setAttempts, handleChange, handleLogin, handleSignup, noUser} = AdminHooks()
   
   return (
     <div className="App">
-      <Header/>
+      <Header token={token}/>
       <Switch>
+        {/* HOME PAGE */}
         <Route exact 
           path="/"
-          render={(routerProps) => <Main {...routerProps}/>}
+          render={(routerProps) => <Main {...routerProps}
+            token={token}
+            setToken={setToken}
+          />}
         />
+
+        {/* FOOD ROUTES */}
         <Route 
           path="/food"
           render={(routerProps) => (
-            <Food {...routerProps}
+            <FoodIn {...routerProps}
+              token={token}
               entrees = {entrees}
-              setEntrees = {setEntrees}
               getEntrees={getEntrees}
-              createEntrees={createEntrees}
-              updateEntrees={updateEntrees}
-              deleteEntrees={deleteEntrees}
               apps={apps}
-              setApps={setApps}
               getApps = {getApps}
-              createApps = {createApps}
-              updateApps = {updateApps}
-              deleteApps = {deleteApps}
             />
           )}
         />
+        <Route 
+          path="/food/:id/edit"
+        />
+
+        {/* DRINK ROUTES */}
         <Route 
           path="/drinks"
           render={(routerProps) => (
-            <Drinks {...routerProps}
+            <DrinksIn {...routerProps}
+              token={token}
               drinks = {drinks}
-              setDrinks = {setDrinks}
               getDrinks = {getDrinks}
-              createDrinks = {createDrinks}
-              updateDrinks = {updateDrinks}
-              deleteDrinks = {deleteDrinks}
               beerWines = {beerWines}
-              setBeerWines = {setBeerWines}
               getBeerWines = {getBeerWines}
-              createBeerWines = {createBeerWines}
-              updateBeerWines = {updateBeerWines}
-              deleteBeerWines = {deleteBeerWines}
             />
           )}
         />
+
+        {/* ADMIN ROUTES */}
         <Route 
-          path="/admin"
+          path="/login"
           render={(routerProps) => (
-            <Admin {...routerProps}/>
+            <Login {...routerProps}/>
+          )}
+        />
+        <Route 
+          path="/signup"
+          render={(routerProps) => (
+            <Signup {...routerProps}/>
           )}
         />
       </Switch>

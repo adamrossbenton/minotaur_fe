@@ -3,6 +3,7 @@ import {useState} from "react"
 function AppsHooks() {
     // DB URL & State
     const appsUrl = "https://minotaurbackend.herokuapp.com/appetizers/"
+    // const appsUrl = "http://localhost:4000/appetizers"
     const [apps, setApps] = useState(null)
 
     // Hooks

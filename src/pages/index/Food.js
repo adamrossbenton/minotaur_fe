@@ -1,6 +1,6 @@
 import React, {useEffect} from "react"
 
-const Food = props => {
+const FoodIn = props => {
 
     // useEffect for initial entree/app render
     useEffect(() => props.getEntrees(), [])
@@ -69,4 +69,4 @@ const Food = props => {
     </>
 }
 
-export default Food
+export default FoodIn

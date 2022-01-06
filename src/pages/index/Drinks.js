@@ -1,6 +1,6 @@
 import React, {useEffect} from "react"
 
-const Drinks = props => {
+const DrinksIn = props => {
 
     // useEffect for initial entree/app render
     useEffect(() => props.getDrinks(), [])
@@ -96,4 +96,4 @@ const Drinks = props => {
     </>
 }
 
-export default Drinks
+export default DrinksIn
