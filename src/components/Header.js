@@ -16,7 +16,7 @@ const Header = props => {
             <small>Sat: 12:00 PM - 2:00 AM</small>
             <small>Sun: 12:00 PM - 12:00 AM</small>
         </div>
-        <Nav/>
+        <Nav token={props.token}/>
     </>
 }
 

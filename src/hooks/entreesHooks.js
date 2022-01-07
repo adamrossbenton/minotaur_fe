@@ -1,8 +1,8 @@
 import {useState} from "react"
-
+import url from "./url"
 function EntreesHooks() {
     // DB URL & State
-    const entreesUrl = "https://minotaurbackend.herokuapp.com/entrees/"
+    const entreesUrl = url + "entrees/"
     const [entrees, setEntrees] = useState(null)
 
     // Hooks
@@ -12,31 +12,36 @@ function EntreesHooks() {
         setEntrees(data)
     }
 
-    const createEntrees = async (ent) => {
+    const createEntrees = async (ent, token) => {
         await fetch(entreesUrl, {
             method: "post",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${token}`
             },
             body: JSON.stringify(ent)
         })
         getEntrees()
     }
 
-    const updateEntrees = async (ent, id) => {
+    const updateEntrees = async (ent, id, token) => {
         await fetch(entreesUrl + id, {
             method: "put",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${token}`
             },
             body: JSON.stringify(ent)
         })
         getEntrees()
     }
 
-    const deleteEntrees = async id => {
+    const deleteEntrees = async (id, token) => {
         await fetch(entreesUrl + id, {
             method: "delete",
+            headers: {
+                "Authorization": `bearer ${token}`
+            }
         })
         getEntrees()
     }

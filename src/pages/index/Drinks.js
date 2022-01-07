@@ -1,6 +1,9 @@
 import React, {useEffect} from "react"
+import {Link} from "react-router-dom"
 
-const Drinks = props => {
+const DrinksIn = props => {
+
+    const token = props.token
 
     // useEffect for initial entree/app render
     useEffect(() => props.getDrinks(), [])
@@ -15,7 +18,7 @@ const Drinks = props => {
             <div key={drink.id} className="item-section">
                 <div className="name-price">
                     <div className="name-dietary">
-                        <h3>{drink.name}</h3>
+                        {token? <Link to={`/drinks/cocktails/${drink.id}`}>{drink.name}</Link> : <h3>{drink.name}</h3>}
                         <div className="dietary"></div>
                     </div>
                     <h4>{drink.price}</h4>
@@ -29,7 +32,7 @@ const Drinks = props => {
         return props.beerWines.filter(bw => bw.draft).map((draft) => (
             <div key={draft.id} className="item-section">
                 <div className="name-dietary">
-                    <h3>{draft.name}</h3>
+                    {token? <Link to={`/drinks/beerwines/${draft.id}`}>{draft.name}</Link> : <h3>{draft.name}</h3>}
                     <div className="dietary"></div>
                 </div>
             </div>
@@ -40,7 +43,7 @@ const Drinks = props => {
         return props.beerWines.filter(bw => bw.beer && !bw.draft).map((bc) => (
             <div key={bc.id} className="item-section">
                 <div className="name-dietary">
-                    <h3>{bc.name}</h3>
+                    {token? <Link to={`/drinks/beerwines/${bc.id}`}>{bc.name}</Link> : <h3>{bc.name}</h3>}
                     <div className="dietary"></div>
                 </div>
             </div>
@@ -51,7 +54,7 @@ const Drinks = props => {
         return props.beerWines.filter(bw => bw.red).map((red) => (
             <div key={red.id} className="item-section">
                 <div className="name-dietary">
-                    <h3>{red.name}</h3>
+                    {token? <Link to={`/drinks/beerwines/${red.id}`}>{red.name}</Link> : <h3>{red.name}</h3>}
                     <div className="dietary"></div>
                 </div>
             </div>
@@ -62,7 +65,7 @@ const Drinks = props => {
         return props.beerWines.filter(bw => !bw.beer && !bw.red).map((wht) => (
             <div key={wht.id} className="item-section">
                 <div className="name-dietary">
-                    <h3>{wht.name}</h3>
+                    {token? <Link to={`/drinks/beerwines/${wht.id}`}>{wht.name}</Link> : <h3>{wht.name}</h3>}
                     <div className="dietary"></div>
                 </div>
             </div>
@@ -73,8 +76,10 @@ const Drinks = props => {
     return <>
         <div className="menu-section" id="drink-section">
             <h1>Cocktails:</h1>
+            {token? <Link to="/drinks/cocktails/new"><button>Add Cocktail</button></Link> : null}
             {props.drinks? loadedDrinks() : loading()}
         </div>
+        {token? <Link to="/drinks/beerwines/new"><button>Add Beer/Wine</button></Link> : null}
         <h1>Beer:</h1>
         <div className="menu-section" id="draft-section">
             <h2>Draft:</h2>
@@ -96,4 +101,4 @@ const Drinks = props => {
     </>
 }
 
-export default Drinks
+export default DrinksIn
