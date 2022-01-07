@@ -2,12 +2,11 @@ import {useState} from "react"
 import {useHistory} from "react-router-dom"
 
 const AdminHooks = () => {
-    // Live
+    
     // const loginUrl = "https://minotaurbackend.herokuapp.com/login/"
-    // const signupUrl = "https://minotaurbackend.herokuapp.com/signup/"
-    // Test
     const loginUrl = "http://localhost:4000/login"
-    const signupUrl = "http://localhost:4000/users"
+    const signupUrl = "https://minotaurbackend.herokuapp.com/signup/"
+
     const history = useHistory()
 
     // Token Setup
@@ -64,7 +63,6 @@ const AdminHooks = () => {
     }
 
     const handleLogin = async e => {
-        console.log("running handleLogin")
         setAttempts(attempts+1)
         e.preventDefault()
         if (newForm) {

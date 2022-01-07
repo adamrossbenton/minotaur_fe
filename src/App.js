@@ -68,6 +68,7 @@ function App(props) {
             <AppsNew {...routerProps}
               token={token}
               createApps={createApps}
+              handleChange={handleChange}
             />
           )}
         />
@@ -87,6 +88,7 @@ function App(props) {
           render={(routerProps) => (
             <AppsSh {...routerProps}
               token={token}
+              apps={apps}
               updateApps={updateApps}
               deleteApps={deleteApps}
             />
@@ -98,6 +100,7 @@ function App(props) {
             <EntreesNew {...routerProps}
               token={token}
               createEntrees={createEntrees}
+              handleChange={handleChange}
             />
           )}
         />
@@ -116,6 +119,7 @@ function App(props) {
           render={(routerProps) => (
             <EntreesSh {...routerProps}
               token={token}
+              entrees={entrees}
               updateEntrees={updateEntrees}
               deleteEntrees={deleteEntrees}
             />
@@ -143,6 +147,7 @@ function App(props) {
             <DrinksNew {...routerProps}
               token={token}
               createDrinks={createDrinks}
+              handleChange={handleChange}
             />
           )}
         />
@@ -161,6 +166,7 @@ function App(props) {
           render={(routerProps) => (
             <DrinksSh {...routerProps}
               token={token}
+              drinks={drinks}
               updateDrinks={updateDrinks}
               deleteDrinks={deleteDrinks}
             />
@@ -172,6 +178,7 @@ function App(props) {
             <BeerWinesNew {...routerProps}
               token={token}
               createBeerWines={createBeerWines}
+              handleChange={handleChange}
             />
           )}
         />
@@ -190,6 +197,7 @@ function App(props) {
           render={(routerProps) => (
             <BeerWinesSh {...routerProps}
               token={token}
+              beerWines={beerWines}
               updateBeerWines={updateBeerWines}
               deleteBeerWines={deleteBeerWines}
             />

@@ -3,7 +3,6 @@ import {useState} from "react"
 function EntreesHooks() {
     // DB URL & State
     const entreesUrl = "https://minotaurbackend.herokuapp.com/entrees/"
-    // const entreesUrl = "http://localhost:4000/entrees"
     const [entrees, setEntrees] = useState(null)
 
     // Hooks
