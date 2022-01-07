@@ -1,8 +1,8 @@
 import {useState} from "react"
-
+import url from "./url"
 function AppsHooks() {
     // DB URL & State
-    const appsUrl = "https://minotaurbackend.herokuapp.com/appetizers/"
+    const appsUrl = url + "appetizers/"
     const [apps, setApps] = useState(null)
 
     // Hooks
@@ -23,11 +23,12 @@ function AppsHooks() {
         getApps()
     }
 
-    const updateApps = async (app, id) => {
+    const updateApps = async (app, id, token) => {
         await fetch(appsUrl + id, {
             method: "put",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${token}`
             },
             body: JSON.stringify(app)
         })

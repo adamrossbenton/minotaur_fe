@@ -1,8 +1,8 @@
 import {useState} from "react"
-
+import url from "./url"
 function EntreesHooks() {
     // DB URL & State
-    const entreesUrl = "https://minotaurbackend.herokuapp.com/entrees/"
+    const entreesUrl = url + "entrees/"
     const [entrees, setEntrees] = useState(null)
 
     // Hooks

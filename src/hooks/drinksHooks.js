@@ -1,8 +1,9 @@
 import {useState} from "react"
+import url from "./url"
 
 function DrinksHooks() {
     // DB URL & State
-    const drinksUrl = "https://minotaurbackend.herokuapp.com/drinks/"
+    const drinksUrl = url + "drinks/"
     const [drinks, setDrinks] = useState(null)
 
     // Hooks

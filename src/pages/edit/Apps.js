@@ -23,9 +23,15 @@ function AppsEd(props) {
         })
     }
 
+    const handleCheck = e => {
+        setEditForm({...editForm,
+            [e.target.name]: e.target.checked
+        })
+    }
+
     const handleSubmit = e => {
         e.preventDefault()
-        props.updateApps(editForm, app.id)
+        props.updateApps(editForm, app.id, token)
         history.push("/food")
     }
 
@@ -73,27 +79,32 @@ function AppsEd(props) {
                     type="checkbox"
                     name="vegetarian"
                     checked={editForm.vegetarian}
+                    onChange={handleCheck}
                 />
                 <p>Vegan? :</p>
                 <input
                     type="checkbox"
                     name="vegan"
                     checked={editForm.vegan}
+                    onChange={handleCheck}
                 />
                 <p>Gluten free? </p>
                 <input
                     type="checkbox"
                     name="gf"
                     checked={editForm.gf}
+                    onChange={handleCheck}
                 />
                 <p>Dairy free?</p>
                 <input
                     type="checkbox"
                     name="df"
                     checked={editForm.df}
+                    onChange={handleCheck}
                 />
                 <input type="submit" value="Edit Appetizer" />
             </form>
+            <Link to={`food/appetizers/${app.id}`}><button>Cancel</button></Link>
         </div>
     </>
 }

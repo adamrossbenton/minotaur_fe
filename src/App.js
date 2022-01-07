@@ -234,7 +234,10 @@ function App(props) {
         <Route 
           path="/signup"
           render={(routerProps) => (
-            <Signup {...routerProps}/>
+            <Signup {...routerProps}
+              setToken={setToken}
+              createUser={createUser}
+            />
           )}
         />
       </Switch>

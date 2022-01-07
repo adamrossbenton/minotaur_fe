@@ -1,11 +1,12 @@
 import {useState} from "react"
 import {useHistory} from "react-router-dom"
+import url from "./url"
 
 const AdminHooks = () => {
     
     // const loginUrl = "https://minotaurbackend.herokuapp.com/login/"
-    const loginUrl = "http://localhost:4000/login"
-    const signupUrl = "https://minotaurbackend.herokuapp.com/signup/"
+    const loginUrl = url + "login"
+    const signupUrl = url + "signup"
 
     const history = useHistory()
 
@@ -18,6 +19,7 @@ const AdminHooks = () => {
     const [token, setToken] = useState(getToken())
 
     const saveToken = userToken => {
+        console.log(userToken)
         localStorage.setItem("token", JSON.stringify(userToken))
         setToken(userToken)
     }
@@ -74,7 +76,7 @@ const AdminHooks = () => {
             })
             console.log("Token: ", token)
             if (token && !token.error) {
-                setToken(token)
+                saveToken(token)
                 history.push("/")
             } else {
                 noUser()
