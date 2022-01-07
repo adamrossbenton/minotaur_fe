@@ -53,16 +53,16 @@ function EntreesNew(props) {
     return <>
         <div className="new-item">
             <form onSubmit={handleSubmit} className="new-form">
-                <h3>App Name: </h3>
+                <h3>Entree Name: </h3>
                 <input
                     type="text"
                     value={newForm.name}
                     name="name"
-                    placeholder="App Name"
+                    placeholder="Entree Name"
                     onChange={handleChange}
                     // required
                 />
-                <h3>App Price: </h3>
+                <h3>Entree Price: </h3>
                 <input
                     type="number"
                     value={newForm.price}
@@ -71,11 +71,11 @@ function EntreesNew(props) {
                     onChange={handleChange}
                     // required
                 />
-                <h3>App Description: </h3>
+                <h3>Entree Description: </h3>
                 <textarea 
                     name="description"
                     value={newForm.description}
-                    placeholder="App Description"
+                    placeholder="Entree Description"
                     cols="40"
                     rows="5"
                     onChange={handleChange}
@@ -104,7 +104,7 @@ function EntreesNew(props) {
                     name="df"
                     onClick={handleChange}
                 />
-                <input type="submit" value="Create New Appetizer" />
+                <input type="submit" value="Create New Entree" />
             </form>
         </div>
     </>
