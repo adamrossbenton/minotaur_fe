@@ -4,8 +4,8 @@ import {Link} from "react-router-dom"
 import Nav from "./Nav.js"
 
 const Header = props => {
-    return <>
-        <h1>CYCLOPS</h1>
+    return <div className="header">
+        <h1 className="bar-name">CYCLOPS</h1>
         <div className="header-subsection" id="address">
             <p>2421 1st Ave</p>
             <p>Seattle, WA 98121</p>
@@ -19,7 +19,7 @@ const Header = props => {
         </div>
         <Nav token={props.token}/>
         <Link to="/login">Admin Login</Link>
-    </>
+    </div>
 }
 
 export default Header

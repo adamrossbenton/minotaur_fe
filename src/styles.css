@@ -1,3 +1,11 @@
+body {
+    background-image: url("../benjamin-ashton-T0VOOuz75_w-unsplash.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: whitesmoke;
+}
+
 /* HOME PAGE */
 .main-container {
     display: flex;
@@ -8,6 +16,18 @@
 .carousel {
     margin: 0 auto;
     width: 90%;
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+.carousel .item {
+    width: 100%;
+    background-color: black;
+}
+
+.carousel-inner > .item > img {
+    min-width: 100%;
 }
 
 .d-block {
@@ -16,11 +36,22 @@
 }
 
 /* HEADER/NAV */
+.header {
+    background-color: rgba(0,0,0,0.75);
+    margin-bottom: 20px;
+}
+
+.bar-name {
+    font-size: 112px;
+    font-family: 'Monoton', cursive;
+}
+
 .nav {
     display: flex;
     justify-content: space-around;
     max-width: 50%;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 .header-subsection {
@@ -33,12 +64,19 @@
 
 /* CONTENT PAGES */
 .item-section {
-    text-align: left
+    text-align: left;
+    background-color: rgba(100,100,100,0.5);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 .menu-section {
     margin: 0 auto;
     max-width: 80%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 25px;
+    border-radius: 5px;
 }
 
 .name-price {

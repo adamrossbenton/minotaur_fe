@@ -2,9 +2,10 @@ import React from "react"
 
 const Footer = props => {
     const year = new Date().getFullYear()
-    
+
     return <>
-        <small>Website Designed by Adam Ross Benton © {year}</small>
+        <small>Website Designed by adamrossbenton </small>
+        {year===2022? <small>©{year}</small> : <small>© 2022 - {year}</small>}
     </>
 }
 
