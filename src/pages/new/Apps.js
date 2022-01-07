@@ -20,9 +20,14 @@ function AppsNew(props) {
         [e.target.name]: e.target.value})
     }
 
+    const handleCheck = e => {
+        setNewForm({...newForm,
+        [e.target.name]: e.target.checked})
+    }
+
     const handleSubmit = e => {
         e.preventDefault()
-        props.createApps(newForm)
+        props.createApps(newForm, token)
         setNewForm({
             name: "",
             price: 0,
@@ -68,7 +73,8 @@ function AppsNew(props) {
                 />
                 <h3>App Description: </h3>
                 <textarea 
-                    name={newForm.description}
+                    name="description"
+                    value={newForm.description}
                     placeholder="App Description"
                     cols="40"
                     rows="5"
@@ -78,21 +84,25 @@ function AppsNew(props) {
                 <input
                     type="checkbox"
                     name="vegetarian"
+                    onClick={handleCheck}
                 />
                 <h3>Is It Vegan?</h3>
                 <input
                     type="checkbox"
                     name="vegan"
+                    onClick={handleCheck}
                 />
                 <h3>Is It Gluten-Free?</h3>
                 <input
                     type="checkbox"
                     name="gf"
+                    onClick={handleChange}
                 />
                 <h3>Is It Dairy-Free?</h3>
                 <input
                     type="checkbox"
                     name="df"
+                    onClick={handleChange}
                 />
                 <input type="submit" value="Create New Appetizer" />
             </form>

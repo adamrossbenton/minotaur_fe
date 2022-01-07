@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import {Link, useHistory} from "react-router-dom"
 
 function AppsSh(props) {
+    const token = props.token
     const history = useHistory()
     const id = props.match.params.id
     const apps = props.apps
@@ -11,7 +12,7 @@ function AppsSh(props) {
     )
 
     const removeApp = () => {
-        props.deleteApps(app.id)
+        props.deleteApps(app.id, token)
         history.push("/food")
     }
     

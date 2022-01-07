@@ -12,11 +12,12 @@ function AppsHooks() {
         setApps(data)
     }
 
-    const createApps = async (app) => {
+    const createApps = async (app, token) => {
         await fetch(appsUrl, {
             method: "post",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${token}`
             },
             body: JSON.stringify(app)
         })
@@ -35,9 +36,12 @@ function AppsHooks() {
         getApps()
     }
 
-    const deleteApps = async id => {
+    const deleteApps = async (id, token) => {
         await fetch(appsUrl + id, {
             method: "delete",
+            headers: {
+                "Authorization": `bearer ${token}`
+            }
         })
         getApps()
     }

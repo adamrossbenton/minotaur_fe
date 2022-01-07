@@ -63,10 +63,12 @@ const FoodIn = props => {
     return <>
         <div className="menu-section" id="ent-section">
             <h1>Entrees:</h1>
+            {token? <Link to="/food/entrees/new"><button>Add Entree</button></Link> : null}
             {props.entrees? loadedEntrees() : loading()}
         </div>
         <div className="menu-section" id="app-section">
             <h1>Appetizers:</h1>
+            {token? <Link to="/food/appetizers/new"><button>Add Appetizer</button></Link> : null}
             {props.apps? loadedApps() : loading()}
         </div>
     </>

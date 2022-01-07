@@ -76,8 +76,10 @@ const DrinksIn = props => {
     return <>
         <div className="menu-section" id="drink-section">
             <h1>Cocktails:</h1>
+            {token? <Link to="/drinks/cocktails/new"><button>Add Cocktail</button></Link> : null}
             {props.drinks? loadedDrinks() : loading()}
         </div>
+        {token? <Link to="/drinks/beerwines/new"><button>Add Beer/Wine</button></Link> : null}
         <h1>Beer:</h1>
         <div className="menu-section" id="draft-section">
             <h2>Draft:</h2>
