@@ -6,7 +6,6 @@ function AppsSh(props) {
     const history = useHistory()
     const id = props.match.params.id
     const apps = props.apps
-    console.log(apps)
     const app = apps?.find(p => {
         return p.id == id}
     )

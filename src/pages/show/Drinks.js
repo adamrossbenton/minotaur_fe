@@ -6,7 +6,6 @@ function DrinksSh(props) {
     const history = useHistory()
     const id = props.match.params.id
     const drinks = props.drinks
-    console.log(drinks)
     const drink = drinks?.find(p => {
         return p.id == id}
     )

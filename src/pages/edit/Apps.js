@@ -10,10 +10,8 @@ function AppsEd(props) {
     const id = props.match.params.id
     const apps = props.apps
     const app = apps?.find(p => {
-        console.log("apps: ", apps)
         return p.id == id
     })
-    console.log("app: ", app)
 
     const [editForm, setEditForm] = useState(app)
 

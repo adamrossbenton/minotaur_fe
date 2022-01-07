@@ -6,7 +6,6 @@ function EntreesSh(props) {
     const history = useHistory()
     const id = props.match.params.id
     const entrees = props.entrees
-    console.log(entrees)
     const ent = entrees?.find(p => {
         return p.id == id}
     )
