@@ -26,7 +26,7 @@ const Main = props => {
                         <Carousel.Item>
                             <img 
                                 className="d-block w-100"
-                                src="http://www.cyclopsseattle.com/cuban.gif"
+                                src="https://i.imgur.com/vSfrvUA.jpeg"
                                 alt="Second Slide"
                             />
                             <Carousel.Caption>
@@ -59,7 +59,7 @@ const Main = props => {
                         <Carousel.Item>
                             <img 
                                 className="d-block w-100"
-                                src="http://www.cyclopsseattle.com/welcome_to_belltown_graffiti.jpg"
+                                src="https://images.fineartamerica.com/images-medium-large/welcome-to-belltown-kym-backland.jpg"
                                 alt="Fifth Slide"
                             />
                             <Carousel.Caption>
