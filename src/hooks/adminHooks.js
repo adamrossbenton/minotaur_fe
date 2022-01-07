@@ -4,7 +4,6 @@ import url from "./url"
 
 const AdminHooks = () => {
     
-    // const loginUrl = "https://minotaurbackend.herokuapp.com/login/"
     const loginUrl = url + "login"
     const signupUrl = url + "signup"
 

@@ -41,14 +41,14 @@ function AppsNew(props) {
     }
 
     // Lock behind admin permissions
-    // if (!token) {
-    //     return <>
-    //         <h1>Admin access required</h1>
-    //         <Link to="/food">
-    //             <h3>Return to Food Menu</h3>
-    //         </Link>
-    //     </>
-    // }
+    if (!token) {
+        return <>
+            <h1>Admin access required</h1>
+            <Link to="/food">
+                <h3>Return to Food Menu</h3>
+            </Link>
+        </>
+    }
 
     return <>
         <div className="new-item">
