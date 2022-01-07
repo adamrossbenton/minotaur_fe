@@ -46,6 +46,13 @@ body {
     font-family: 'Monoton', cursive;
 }
 
+.secret-link {
+    border-radius: 55px;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
 .nav {
     display: flex;
     justify-content: space-around;
