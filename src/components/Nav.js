@@ -12,7 +12,6 @@ const Nav = props => {
         <Link to="/food">Food</Link>
         <Link to="/drinks">Drinks</Link>
         {props.token? <form onSubmit={logout}><button id="logout">Logout Admin</button></form> : null}
-        {props.token? <Link to="/signup"><button>Add New Admin</button></Link> : null}
     </nav>
 }
 

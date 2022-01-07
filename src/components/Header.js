@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
 import Nav from "./Nav.js"
 
@@ -17,6 +18,7 @@ const Header = props => {
             <small>Sun: 12:00 PM - 12:00 AM</small>
         </div>
         <Nav token={props.token}/>
+        <Link to="/login">Admin Login</Link>
     </>
 }
 
