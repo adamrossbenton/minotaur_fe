@@ -16,9 +16,6 @@ function AppsSh(props) {
         history.push("/food")
     }
     
-    console.log("app ID: ", app.id)
-    console.log("app ID type: ", typeof app.id)
-
     return <>
         <h1>{app.name}</h1>
         <h3>Price: {app.price}</h3>

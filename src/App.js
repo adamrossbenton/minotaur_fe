@@ -110,6 +110,7 @@ function App(props) {
             <EntreesEd {...routerProps}
               token={token}
               entrees={entrees}
+              getEntrees={getEntrees}
               updateEntrees={updateEntrees}
             />
           )}
@@ -157,6 +158,7 @@ function App(props) {
             <DrinksEd {...routerProps}
               token={token}
               drinks={drinks}
+              getDrinks={getDrinks}
               updateDrinks={updateDrinks}
             />
           )}
@@ -188,6 +190,7 @@ function App(props) {
             <BeerWinesEd {...routerProps}
               token={token}
               beerWines={beerWines}
+              getBeerWines={getBeerWines}
               updateBeerWines={updateBeerWines}
             />
           )}

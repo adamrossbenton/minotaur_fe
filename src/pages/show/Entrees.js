@@ -1,8 +1,29 @@
-import React from "react"
+import React, {useState} from "react"
+import {Link, useHistory} from "react-router-dom"
 
 function EntreesSh(props) {
+    const token = props.token
+    const history = useHistory()
+    const id = props.match.params.id
+    const entrees = props.entrees
+    console.log(entrees)
+    const ent = entrees?.find(p => {
+        return p.id == id}
+    )
+
+    const removeEntree = () => {
+        props.deleteEntrees(ent.id, token)
+        history.push("/food")
+    }
+    
     return <>
-        <h1>hello show entree</h1>
+        <h1>{ent.name}</h1>
+        <h3>Price: {ent.price}</h3>
+        <h5>{ent.description}</h5>
+        <div>
+            <Link to={`/food/entrees/${ent.id}/edit`}><button>Edit Entree</button></Link>
+            <form onSubmit={removeEntree}><button>Delete Entree</button></form>
+        </div>
     </>
 }
 
