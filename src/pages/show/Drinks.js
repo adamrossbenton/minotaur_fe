@@ -16,6 +16,16 @@ function DrinksSh(props) {
         history.push("/drinks")
     }
     
+    // Lock behind admin permissions
+    if (!token) {
+        return <>
+            <h1>Admin access required</h1>
+            <Link to="/drinks">
+                <h3>Return to Drinks Menu</h3>
+            </Link>
+        </>
+    }
+
     return <>
         <h1>{drink.name}</h1>
         <h3>Price: {drink.price}</h3>

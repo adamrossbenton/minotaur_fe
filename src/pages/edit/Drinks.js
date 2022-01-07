@@ -31,8 +31,8 @@ function DrinksEd(props) {
     if (!token) {
         return <>
             <h1>Admin access required</h1>
-            <Link to="/food">
-                <h3>Return to Food Menu</h3>
+            <Link to="/drinks">
+                <h3>Return to Drinks Menu</h3>
             </Link>
         </>
     }
