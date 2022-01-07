@@ -214,7 +214,13 @@ function App(props) {
         <Route 
           path="/login"
           render={(routerProps) => (
-            <Login {...routerProps}/>
+            <Login {...routerProps}
+              setToken={setToken}
+              loginUser={loginUser}
+              handleChange={handleChange}
+              handleLogin={handleLogin}
+              noUser={noUser}
+            />
           )}
         />
         <Route 

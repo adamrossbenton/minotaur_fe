@@ -1,6 +1,9 @@
 import React, {useEffect} from "react"
+import {Link} from "react-router-dom"
 
 const FoodIn = props => {
+
+    const token = props.token
 
     // useEffect for initial entree/app render
     useEffect(() => props.getEntrees(), [])
@@ -21,7 +24,7 @@ const FoodIn = props => {
             <div key={ent.id} className="item-section">
                 <div className="name-price">
                     <div className="name-dietary">
-                        <h3>{ent.name}</h3>
+                        {token? <Link to={`/food/entrees/${ent.id}`}>{ent.name}</Link> : <h3>{ent.name}</h3>}
                         <div className="dietary">
                             {ent.vegetarian? veggie() : null}
                             {ent.vegan? vegan() : null}
@@ -41,7 +44,7 @@ const FoodIn = props => {
             <div key={app.id} className="item-section">
                 <div className="name-price">
                     <div className="name-dietary">
-                        <h3>{app.name}</h3>
+                        {token? <Link to={`/food/appetizers/${app.id}`}>{app.name}</Link> : <h3>{app.name}</h3>}
                         <div className="dietary">
                             {app.vegetarian? veggie() : null}
                             {app.vegan? vegan() : null}

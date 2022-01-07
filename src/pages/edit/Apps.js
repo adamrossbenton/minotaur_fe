@@ -3,15 +3,20 @@ import {Link, useHistory} from "react-router-dom"
 
 function AppsEd(props) {
     
-    useEffect(props.getApps(),[])
+    useEffect(() => props.getApps(), [])
 
-    // const token = props.token
-    // const history = useHistory()
+    const token = props.token
+    const history = useHistory()
     const id = props.match.params.id
     const apps = props.apps
     console.log(id)
     console.log(apps)
-    // const app = apps.find(p => p.id == id)
+    const app = apps?.find(p => {
+        console.log("p.id: " + typeof p.id)
+        console.log("id: " + typeof id)
+        return p.id == id
+    })
+    console.log("app: ", app)
     // Question: would it be p._id or is that just Mongo?
 
     // const [editForm, setEditForm] = useState(app)
@@ -29,17 +34,17 @@ function AppsEd(props) {
     //     history.push("/food")
     // }
 
-    // if (!token) {
-    //     return <>
-    //         <h1>Admin access required</h1>
-    //         <Link to="/food">
-    //             <h3>Return to Food Menu</h3>
-    //         </Link>
-    //     </>
-    // }
+    if (!token) {
+        return <>
+            <h1>Admin access required</h1>
+            <Link to="/food">
+                <h3>Return to Food Menu</h3>
+            </Link>
+        </>
+    }
 
     return <>
-        <h1>hello edit app</h1>
+        <h1>{app.name}</h1>
     </>
 }
 

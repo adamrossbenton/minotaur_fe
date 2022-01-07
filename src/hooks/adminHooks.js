@@ -57,7 +57,14 @@ const AdminHooks = () => {
         })
     }
 
+    const noUser = () => {
+        if (attempts > 0) {
+            return <p>Incorrect username and/or password, please try again</p>
+        }
+    }
+
     const handleLogin = async e => {
+        console.log("running handleLogin")
         setAttempts(attempts+1)
         e.preventDefault()
         if (newForm) {
@@ -67,9 +74,12 @@ const AdminHooks = () => {
                 username,
                 password
             })
-            setToken(token)
-            if (token) {
+            console.log("Token: ", token)
+            if (token && !token.error) {
+                setToken(token)
                 history.push("/")
+            } else {
+                noUser()
             }
         }
     }
@@ -82,12 +92,6 @@ const AdminHooks = () => {
             password: "",
         })
         history.push("/login")
-    }
-
-    const noUser = () => {
-        if (attempts > 0) {
-            return <p>Incorrect username and/or password, please try again</p>
-        }
     }
 
     return {
