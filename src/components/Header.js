@@ -20,7 +20,7 @@ const Header = props => {
             <small>Sun: 12:00 PM - 12:00 AM</small>
         </div>
         <Nav token={props.token}/>
-        <Link to="/login"><img className="secret-link" src={eyeball}/></Link>
+        <Link to="/login"><img className="secret-link" src={eyeball} alt="eyeball"/></Link>
     </div>
 }
 
