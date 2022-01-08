@@ -69,7 +69,7 @@ Prices are not listed for beers/wines, but the set of booleans allows for a smal
 
 Original Website (eww): http://www.cyclopsseattle.com/Drink_Specials.html
 
-My Version (slightly less eww): https://pensive-hypatia-1ca301.netlify.app/
+My Frontend (slightly less eww): https://pensive-hypatia-1ca301.netlify.app/
 
 My Backend (probably still some eww): https://minotaurbackend.herokuapp.com/
 - you'll need to add the four different relation routes onto the end of this bad boy in order to see anything
