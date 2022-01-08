@@ -30,7 +30,7 @@ const Main = props => {
                                 alt="Second Slide"
                             />
                             <Carousel.Caption>
-                                <h4>We have cubanos</h4>
+                                <h4>Tenemos cubanos</h4>
                                 <p>Muy delicioso</p>
                             </Carousel.Caption>
                         </Carousel.Item>
