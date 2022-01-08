@@ -30,7 +30,7 @@ Let's see if I can represent this somewhat cleanly in readme format...
 - "/login" Admin Login (it's a secret to everyone)
 
 ### Data Structure
-Data is separated into four separate relations: Entrees, Appetizers, Drinks, and BeerWines. None of these are related, or connected to any authenticated users, so admittedly this may not have been the best choice for showing off my skills with a relational database. But whatever, it still works.
+Data is separated into four separate relations: Entrees, Appetizers, Drinks, and BeerWines.
 
 ##### Entrees/Appetizers (they both have the same schema)
 - name: string
@@ -62,7 +62,8 @@ Prices are not listed for beers/wines, but the set of booleans allows for a smal
 - Ruby/Rails (backend)
 - JS/Node/ReactJS (frontend)
 - CSS/Bootstrap (make it look pretty)
-- Heroku/Netlify (host that boy)
+- JWT/bcrypt (admin only)
+- Heroku/Netlify (host the boy)
 - Github (so I can keep my code somehwat organized)
 
 ### Website Links
