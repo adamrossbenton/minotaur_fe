@@ -24,7 +24,7 @@ Let's see if I can represent this somewhat cleanly in readme format...
         - ":id/edit" Edit Specific Cocktail
         - "new" Add New Cocktail
     - "/drinks/beerwines" CRUD options for beers and wines
-        - ":id: Show Specific Beer or Wine
+        - ":id" Show Specific Beer or Wine
         - ":id/edit" Edit Specific Beer or Wine
         - "new" Add New Beer or Wine
 - "/login" Admin Login
