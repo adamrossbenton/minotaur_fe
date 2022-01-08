@@ -59,8 +59,8 @@ By far the simplest/most straightforward schema of the four
 Prices are not listed for beers/wines, but the set of booleans allows for a small binary tree to distinguish between draught beer, bottled/canned beer, red wine, and white wine.
 
 ### Technologies Used
-- Ruby/Rails
-- JS/Node/ReactJS
-- CSS/Bootstrap
-- Heroku/Netlify
-- Github
+- Ruby/Rails (backend)
+- JS/Node/ReactJS (frontend)
+- CSS/Bootstrap (make it look pretty)
+- Heroku/Netlify (host that boy)
+- Github (so I can keep my code somehwat organized)
