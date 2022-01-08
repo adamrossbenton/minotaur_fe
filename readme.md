@@ -27,7 +27,7 @@ Let's see if I can represent this somewhat cleanly in readme format...
         - ":id" Show Specific Beer or Wine
         - ":id/edit" Edit Specific Beer or Wine
         - "new" Add New Beer or Wine
-- "/login" Admin Login
+- "/login" Admin Login (it's a secret to everyone)
 
 ### Data Structure
 Data is separated into four separate relations: Entrees, Appetizers, Drinks, and BeerWines. None of these are related, or connected to any authenticated users, so admittedly this may not have been the best choice for showing off my skills with a related database. But whatever, it still works.
