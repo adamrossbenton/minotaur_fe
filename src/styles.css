@@ -56,9 +56,15 @@ body {
 .nav {
     display: flex;
     justify-content: space-around;
-    max-width: 50%;
+    max-width: 75%;
     margin: 0 auto;
     padding-top: 10px;
+}
+
+.nav-link{
+    color: white;
+    font-family: 'Monoton', cursive;
+    font-size: 1.5em;
 }
 
 .header-subsection {
