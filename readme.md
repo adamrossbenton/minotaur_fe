@@ -67,7 +67,7 @@ Prices are not listed for beers/wines, but the set of booleans allows for a smal
 
 ### Website Links
 
-Original Website (eww): http://www.cyclopsseattle.com/Drink_Specials.html
+Original Website (eww): http://www.cyclopsseattle.com
 
 My Frontend (slightly less eww): https://pensive-hypatia-1ca301.netlify.app/
 
