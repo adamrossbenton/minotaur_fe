@@ -73,7 +73,7 @@ const Main = props => {
                 <div className="main-description">
                     <h3>Who am I? Am I... Belltown?</h3>
                     <p>Voted "Best Bar In Belltown" by at least one Belltown resident (you'll never guess who), this is the go-to spot for burgs, brunch, or just general boozy shenanigans.</p><br/>
-                    <p>We've got burgers. We've got brunch. We've got booze. We've got bros. We've got Belltown.</p><br/>
+                    <p>We've got burgers. We've got brunch. We've got beers. We've got bwhiskey. We've got Belltown.</p><br/>
                     <p>Come give us money in exchange for alcohol so we can pay our  crazy expensive Seattle rent please.</p>
                 </div>
             </div>
