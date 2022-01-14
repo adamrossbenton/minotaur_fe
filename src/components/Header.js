@@ -7,11 +7,11 @@ import eyeball from "./eyeball.gif"
 
 const Header = props => {
     return <div className="header">
-        <h1 className="bar-name">CYCLOPS</h1>
+        <h1 className="bar-name">MINOTAUR</h1>
         <div className="header-subsection" id="address">
-            <p>2421 1st Ave</p>
-            <p>Seattle, WA 98121</p>
-            <p>(206) 441-1677</p>
+            <p>1234 5TH Ave</p>
+            <p>Seattle, WA 98109</p>
+            <p>(123) 456-7890</p>
         </div>
         <div className="header-subsection" id="hours">
             <small>Wed-Thur: 3:00 PM - 12:00 AM</small>
