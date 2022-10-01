@@ -69,6 +69,7 @@ const AdminHooks = () => {
         if (newForm) {
             const {username} = newForm
             const {password} = newForm
+            console.log(username, password)
             const token = await loginUser({
                 username,
                 password
